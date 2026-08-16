@@ -1,0 +1,306 @@
+.traviora-hero {
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #00142d;
+}
+
+.traviora-hero-swiper,
+.traviora-hero-swiper .swiper-wrapper,
+.traviora-hero-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.traviora-hero-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.traviora-hero-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  transform: scale(1.04);
+}
+
+.swiper-slide-active .traviora-hero-slide img {
+  animation: travioraHeroZoom 7s ease-out forwards;
+}
+
+.traviora-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 18, 44, 0.62) 0%,
+      rgba(7, 18, 44, 0.42) 45%,
+      rgba(7, 18, 44, 0.78) 100%
+    );
+}
+
+.traviora-hero-slide .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.traviora-hero-content {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 85px 20px 45px;
+  color: #fff;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* Category Badge */
+.traviora-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: rgba(68, 0, 231, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-family: var(--poppins-font);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(68, 0, 231, 0.3);
+  opacity: 1;
+}
+
+.traviora-hero-badge i {
+  color: #a855f7;
+  font-size: 14px;
+}
+
+/* Subtitle */
+.traviora-hero-subtitle {
+  margin: 0 0 8px;
+  font-family: var(--poppins-font);
+  font-size: clamp(13.5px, 1.5vw, 19px);
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Main Display Title */
+.traviora-hero-title {
+  margin: 0 0 12px;
+  font-family: var(--kings-font);
+  font-size: clamp(58px, 8vw, 100px);
+  font-weight: normal;
+  line-height: 0.92;
+  color: #fff;
+  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.65);
+}
+
+/* Engaging Description */
+.traviora-hero-desc {
+  max-width: 660px;
+  margin: 0 auto 22px;
+  font-family: var(--poppins-font);
+  font-size: clamp(13.5px, 1.3vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Slide Transition Keyframes */
+.swiper-slide-active .traviora-hero-badge {
+  animation: heroFadeDown 0.7s ease-out forwards;
+}
+
+.swiper-slide-active .traviora-hero-subtitle {
+  animation: heroFadeDown 0.8s ease-out 0.08s forwards;
+}
+
+.swiper-slide-active .traviora-hero-title {
+  animation: heroZoomIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.14s forwards;
+}
+
+.swiper-slide-active .traviora-hero-desc {
+  animation: heroFadeUp 0.8s ease-out 0.2s forwards;
+}
+
+.swiper-slide-active .traviora-hero-btn {
+  animation: heroFadeUp 0.85s ease-out 0.26s forwards;
+}
+
+@keyframes heroFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Button */
+.traviora-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 999px;
+  padding: 13px 36px;
+  font-family: var(--poppins-font);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #4400e7 0%, #7d00fc 100%);
+  box-shadow: 0 14px 34px rgba(68, 0, 231, 0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+}
+
+.traviora-hero-btn:hover,
+.traviora-hero-btn:focus-visible {
+  color: #fff;
+  filter: brightness(1.15);
+  transform: scale(1.06);
+  box-shadow: 0 20px 45px rgba(125, 0, 252, 0.55);
+}
+
+.traviora-hero-btn i {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.traviora-hero-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* Carousel Pagination Bullets */
+.traviora-hero-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transform: translateX(-50%);
+}
+
+.traviora-hero-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  margin: 0 !important;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.45);
+  transition: width 0.35s ease, background 0.35s ease;
+}
+
+.traviora-hero-pagination .swiper-pagination-bullet-active {
+  width: 32px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes travioraHeroZoom {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+@media (max-width: 991px) {
+  .traviora-hero-title {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 575px) {
+  .traviora-hero-content {
+    padding: 80px 14px 45px;
+  }
+
+  .traviora-hero-badge {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+  }
+
+  .traviora-hero-subtitle {
+    font-size: 12.5px;
+    letter-spacing: 2px;
+  }
+
+  .traviora-hero-title {
+    font-size: 48px;
+  }
+
+  .traviora-hero-desc {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .traviora-hero-btn {
+    padding: 11px 26px;
+    font-size: 13px;
+  }
+}

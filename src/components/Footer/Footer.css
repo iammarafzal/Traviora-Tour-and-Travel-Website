@@ -1,0 +1,250 @@
+.site-footer {
+  background: #fff;
+}
+
+.footer-newsletter {
+  padding: 42px 0;
+  background: #2b1768;
+}
+
+.footer-newsletter h2 {
+  margin: 0;
+  font-family: var(--urbanist-font);
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.footer-newsletter h2 span {
+  display: block;
+}
+
+.footer-subscribe {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 680px;
+  margin-left: auto;
+  padding: 8px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.18);
+}
+
+.footer-subscribe input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  padding: 0 22px;
+  font-family: var(--poppins-font);
+  font-size: 15px;
+  color: #1f2430;
+  background: transparent;
+}
+
+.footer-subscribe input::placeholder {
+  color: #8b93a3;
+}
+
+.footer-subscribe button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 999px;
+  padding: 16px 30px;
+  font-family: var(--poppins-font);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #fff;
+  background: linear-gradient(135deg, #6c2cff, #8b3dff);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.footer-subscribe button:hover,
+.footer-subscribe button:focus-visible {
+  transform: scale(1.04);
+  box-shadow: 0 16px 34px rgba(108, 44, 255, 0.36);
+}
+
+.footer-main {
+  background: #fff;
+}
+
+.footer-content {
+  height: 100%;
+  padding: 74px max(24px, 8vw) 70px max(24px, 8vw);
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-family: var(--kings-font);
+  font-size: 48px;
+  line-height: 1;
+  color: #1f2430;
+  text-decoration: none;
+}
+
+.footer-logo:hover {
+  color: #6c2cff;
+}
+
+.footer-description {
+  max-width: 390px;
+  margin: 0 0 26px;
+  font-family: var(--poppins-font);
+  font-size: 15px;
+  line-height: 1.78;
+  color: #6b7280;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(108, 44, 255, 0.12);
+  border-radius: 50%;
+  color: #6c2cff;
+  background: #f7f3ff;
+  text-decoration: none;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover,
+.footer-socials a:focus-visible {
+  color: #fff;
+  background: #6c2cff;
+  transform: translateY(-4px);
+}
+
+.footer-content h3 {
+  margin: 8px 0 20px;
+  font-family: var(--urbanist-font);
+  font-size: 21px;
+  font-weight: 800;
+  color: #1f2430;
+}
+
+.footer-content ul {
+  display: grid;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content li {
+  list-style: none;
+}
+
+.footer-content li a {
+  font-family: var(--poppins-font);
+  font-size: 15px;
+  font-weight: 500;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-content li a:hover,
+.footer-content li a:focus-visible {
+  color: #6c2cff;
+  padding-left: 4px;
+}
+
+.footer-image {
+  height: 100%;
+  min-height: 430px;
+  overflow: hidden;
+}
+
+.footer-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.footer-bottom {
+  padding: 22px 16px;
+  text-align: center;
+  background: #1f2428;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-family: var(--poppins-font);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 1199px) {
+  .footer-content {
+    padding: 64px max(24px, 6vw);
+  }
+
+  .footer-image {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-newsletter {
+    text-align: center;
+  }
+
+  .footer-subscribe {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-newsletter {
+    padding: 36px 0;
+  }
+
+  .footer-subscribe {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 24px;
+    padding: 12px;
+  }
+
+  .footer-subscribe input {
+    min-height: 50px;
+    text-align: center;
+  }
+
+  .footer-content {
+    padding: 54px 24px;
+    text-align: center;
+  }
+
+  .footer-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-content ul {
+    justify-items: center;
+  }
+
+  .footer-image {
+    min-height: 310px;
+  }
+}

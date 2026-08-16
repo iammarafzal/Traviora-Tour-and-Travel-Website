@@ -1,0 +1,58 @@
+.blog-intro {
+  padding: 35px 0 10px;
+  background: #fff;
+}
+
+.blog-intro-heading span {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-family: var(--poppins-font);
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+  color: #6c2cff;
+}
+
+.blog-intro-heading h2 {
+  margin: 0;
+  font-family: var(--urbanist-font);
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1f2430;
+}
+
+.blog-intro-heading h2 span {
+  display: block;
+}
+
+.blog-intro-text {
+  max-width: 540px;
+  margin: 0 0 0 auto;
+  font-family: var(--poppins-font);
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+@media (max-width: 991px) {
+  .blog-intro {
+    padding: 30px 0 10px;
+    text-align: center;
+  }
+
+  .blog-intro-text {
+    margin: 10px auto 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .blog-intro-heading span {
+    font-size: 11.5px;
+    letter-spacing: 2px;
+  }
+
+  .blog-intro-text {
+    font-size: 13.5px;
+  }
+}
